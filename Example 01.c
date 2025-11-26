@@ -405,6 +405,8 @@ int linearSearch(const int array[MAX], unsigned int size, int element) {
 }
 
 int binarySearch(const int array[MAX], unsigned int size, int element) {
+    // Array must be sorted ascending!
+
     assert(size != 0);
 
     unsigned int l = 0          ;
