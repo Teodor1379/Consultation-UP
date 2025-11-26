@@ -148,7 +148,7 @@ void sortArrayDescending(int array[MAX], unsigned int size) {
 
 
 
-unsigned int removeDuplicates(int array[MAX], int result[MAX], unsigned int size) {
+unsigned int removeDuplicates(const int array[MAX], int result[MAX], unsigned int size) {
     unsigned int index = 0;
 
     for (unsigned int i = 0; i < size; ++i) {
@@ -174,7 +174,7 @@ unsigned int removeDuplicates(int array[MAX], int result[MAX], unsigned int size
 
 
 
-unsigned int findConjunctionArraysNaive(int array1[MAX], int array2[MAX], int array3[MAX], unsigned int size1, unsigned int size2) {
+unsigned int findConjunctionArraysNaive(const int array1[MAX], const int array2[MAX], int array3[MAX], unsigned int size1, unsigned int size2) {
     unsigned int index = 0;
 
     for (unsigned int i = 0; i < size1; ++i) {
@@ -212,7 +212,7 @@ unsigned int findConjunctionArraysNaive(int array1[MAX], int array2[MAX], int ar
     return index;
 }
 
-unsigned int findDisjunctionArraysNaive(int array1[MAX], int array2[MAX], int array3[MAX], unsigned int size1, unsigned int size2) {
+unsigned int findDisjunctionArraysNaive(const int array1[MAX], const int array2[MAX], int array3[MAX], unsigned int size1, unsigned int size2) {
     unsigned int index = 0;
 
     for (unsigned int i = 0; i < size1; ++i) {
@@ -271,7 +271,7 @@ unsigned int findDisjunctionArraysNaive(int array1[MAX], int array2[MAX], int ar
 }
 
 
-unsigned int findDisjunctionArrays(int array1[MAX], int array2[MAX], int array3[MAX], unsigned int size1, unsigned int size2) {
+unsigned int findDisjunctionArrays(const int array1[MAX], const int array2[MAX], int array3[MAX], unsigned int size1, unsigned int size2) {
     sortArrayAscending(array1, size1);
     sortArrayAscending(array2, size2);
 
@@ -318,7 +318,7 @@ unsigned int findDisjunctionArrays(int array1[MAX], int array2[MAX], int array3[
     return index3;
 }
 
-unsigned int findConjunctionArrays(int array1[MAX], int array2[MAX], int array3[2 * MAX], unsigned int size1, unsigned int size2) {
+unsigned int findConjunctionArrays(const int array1[MAX], const int array2[MAX], int array3[2 * MAX], unsigned int size1, unsigned int size2) {
     sortArrayAscending(array1, size1);
     sortArrayAscending(array2, size2);
 
@@ -345,7 +345,7 @@ unsigned int findConjunctionArrays(int array1[MAX], int array2[MAX], int array3[
     return index3;
 }
 
-void findDifferencesArrays(int array1[MAX], int array2[MAX], int array3[MAX], int array4[MAX], unsigned int size1, unsigned int size2, unsigned int* newSize1, unsigned int* newSize2) {
+void findDifferencesArrays(const int array1[MAX], const int array2[MAX], int array3[MAX], int array4[MAX], unsigned int size1, unsigned int size2, unsigned int* newSize1, unsigned int* newSize2) {
     sortArrayAscending(array1, size1);
     sortArrayAscending(array2, size2);
 
